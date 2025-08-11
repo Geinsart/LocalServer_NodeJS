@@ -1,8 +1,21 @@
 const http = require('http');
 const fs = require('fs');
+const _ = require('lodash');
+
 
 const server = http.createServer((req, res) => {
 console.log(req.url, req.method);
+
+const numero = _.random(0,50);
+console.log(numero);
+
+const saudacao = _.once(() => {
+
+    console.log('boas vindas ao nosso site');
+
+})
+
+saudacao();
 
 
 //definindo o tipo de conteúdo do cabeçalho
